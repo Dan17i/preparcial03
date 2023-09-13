@@ -7,7 +7,10 @@
  */
 package co.edu.uniquindio.poo;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+import java.time.LocalDate;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 
@@ -21,9 +24,22 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue() {
-        LOG.info("Iniciado test shouldAnswerWithTrue");
-        assertTrue(true);
-        LOG.info("Finalizando test shouldAnswerWithTrue");
+    public void datosCompletos() {
+        LOG.info("Iniciado test datosCompletos");
+       
+        Marca marca = new Marca("Diana", "www.Diana.com", "diana@gmail.co");
+        Producto producto = new Producto("Arroz", LocalDate.of(2024, 5, 5), (float)2000, marca,TipoProducto.NACIONAL);
+
+        assertEquals("Diana",marca.nombre());
+        assertEquals("www.Diana.com",marca.web());
+        assertEquals("diana@gmail.co", marca.mail());
+        assertEquals("Arroz", producto.nombre());
+        assertEquals( LocalDate.of(2024, 5, 5),producto.fechaVencimiento());
+        assertEquals((float)2000,producto.precio());
+        assertEquals( marca,producto.marca());
+        assertEquals(TipoProducto.NACIONAL, producto.tipoProducto());
+
+        LOG.info("Finalizando test datosCompletos");
     }
+
 }
