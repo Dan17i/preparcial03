@@ -1,7 +1,7 @@
 /**
  * Clase para probar el funcionamiento del código
- * @author Área de programación UQ
- * @since 2023-08
+ * @author Daniel Jurado UQ
+ * @since 2023-09-13
  * 
  * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
  */
